@@ -4,14 +4,13 @@
 		<article id="comment-<?php comment_ID(); ?>">
 			<header class="comment-author vcard">
 				<?php echo get_avatar($comment,$size='32'); ?>
-				<?php printf(__('<cite class="fn">%s</cite>', 'roots'), get_comment_author_link()) ?>
+				<?php printf(__('<cite class="fn">%s</cite>', 'roots'), get_comment_author_link()) ?> <?php edit_comment_link(__('(Edit)', 'roots'), '', '') ?>
 				<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'roots'), get_comment_date(),  get_comment_time()) ?></a></time>
-				<?php edit_comment_link(__('(Edit)', 'roots'), '', '') ?>
 			</header>
 
 			<?php if ($comment->comment_approved == '0') : ?>
        			<div class="notice">
-					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'roots') ?></p>
+				<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'roots') ?></p>
           		</div>
           		
 			<?php endif; ?>
@@ -77,20 +76,11 @@
 		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>"><?php _e('Log out &raquo;', 'roots'); ?></a></p>
 		<?php else : ?>
 		<p>
-			<label for="author"><?php _e('Name', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
 			<input type="text" class="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
-		</p>
-		<p>
-			<label for="email"><?php _e('Email (will not be published)', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
-			<input type="email" class="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
-		</p>
-		<p>
-			<label for="url"><?php _e('Website', 'roots'); ?></label>
-			<input type="url" class="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+			<label for="author"><?php _e('Name', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
 		</p>
 		<?php endif; ?>
 		<p>
-			<label for="comment"><?php _e('Comment', 'roots'); ?></label>
 			<textarea name="comment" id="comment" tabindex="4"></textarea>
 		</p>
 		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'roots'); ?>"></p>

@@ -3,8 +3,13 @@
 		<div id="content" class="<?php echo $roots_options['container_class']; ?>">
 		<?php roots_main_before(); ?>
 			<div id="main" role="main">
-				<div class="container">
+				<div class="container clearfix">
 					<h1><?php _e('File Not Found', 'roots'); ?></h1>
+					<div class="oh">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/404-girl.png" alt="404 girl" />
+						<p>404 girl by <a href="http://bad--girl.deviantart.com/">Bad--Girl</a>
+					</div>
+					
 					<div class="error">
 						<p class="bottom"><?php _e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'roots'); ?></p>
 					</div>

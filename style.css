@@ -10,5 +10,230 @@ Author URI: http://www.1fenzhong.org/
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 */
-body {
-  margin: 0 auto; }
+/* fix */
+body,
+button,
+input,
+select,
+textarea {
+  color: #333; }
+
+a:link {
+  padding: 2px;
+  color: #9C6B31;
+  text-decoration: none; }
+a:visited {
+  color: #c99458; }
+a:hover, a:focus {
+  color: #678f11;
+  border-radius: 5px;
+  border: none; }
+
+ul {
+  padding: 0; }
+
+#banner {
+  margin: 16px auto 8px; }
+  #banner h2 {
+    float: left;
+    margin-left: 50px;
+    font-size: 16px; }
+
+.hentry time {
+  display: inline-block; }
+
+small {
+  color: #999; }
+
+#logo {
+  width: 189px;
+  height: 87px;
+  margin: 0; }
+  #logo strong {
+    font-size: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+#nav-main ul {
+  margin: 0 0 8px;
+  float: right;
+  width: 75%;
+  background: url(img/dot.gif) repeat; }
+  #nav-main ul li a {
+    padding: 10px 20px;
+    color: #3f3f3f;
+    font-size: 2em; }
+    #nav-main ul li a:hover {
+      color: #678f11;
+      text-shadow: 0 1px 0 #fff; }
+  #nav-main ul li.current-menu-item a, #nav-main ul li.current-menu-parent a {
+    color: #678f11;
+    text-shadow: 0 1px 0 #fff; }
+  #nav-main ul li.float-right {
+    float: right; }
+
+.single-dream #nav-main li.menu-dream a, .post-type-archive-dream #nav-main li.menu-dream a {
+  color: #678f11;
+  text-shadow: 0 1px 0 #fff; }
+
+#nav-utility {
+  position: static; }
+  #nav-utility ul li {
+    margin-left: 16px; }
+    #nav-utility ul li a {
+      padding: 2px;
+      color: #678f11;
+      font-size: 15px;
+      border-bottom: 1px dotted #999; }
+      #nav-utility ul li a:hover {
+        color: #fff;
+        background: #678f11; }
+
+/* not fix */
+.home #sidebar ul li {
+  display: inline;
+  float: left;
+  padding-right: 20px;
+  margin-left: 0; }
+  .home #sidebar ul li.float-right {
+    float: right;
+    padding-right: 0; }
+
+#main h4 {
+  margin: 0; }
+#main .title {
+  font-size: 15px;
+  font-weight: normal; }
+  #main .title:hover {
+    color: #fff;
+    background: #678f11; }
+#main .highlight {
+  padding: 6px;
+  background: url(img/dot.gif) repeat; }
+  #main .highlight .article {
+    padding: 6px;
+    background: #fff; }
+  #main .highlight h3 {
+    margin: 0; }
+  #main .highlight .hl-title {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    overflow: hidden;
+    color: #678f11;
+    font-size: 18px; }
+  #main .highlight .entry {
+    height: 24em;
+    display: block;
+    overflow: hidden; }
+    #main .highlight .entry p {
+      margin-bottom: 2px; }
+#main ul {
+  list-style: none; }
+  #main ul li {
+    margin: 0 0 10px 0; }
+#main .meta {
+  color: #999;
+  display: block;
+  line-height: 20px; }
+  #main .meta a:before {
+    content: "★";
+    color: #afbfcf; }
+#main a.author:before {
+  content: "@";
+  color: #ff9dc7; }
+#main .middleware {
+  height: 200px; }
+  #main .middleware h3 {
+    color: #999;
+    font-size: 30px; }
+
+#dream .middleware h3 {
+  margin-top: 62px;
+  width: 130px;
+  float: left; }
+#dream .middleware .beauty {
+  height: 200px;
+  line-height: 200px;
+  float: right; }
+
+#lesson .middleware {
+  text-align: center; }
+  #lesson .middleware h3 {
+    margin-top: 30px; }
+
+#fly ul {
+  margin: 0; }
+#fly .comments {
+  margin-top: 20px; }
+  #fly .comments .title {
+    font-size: 14px; }
+
+.fly {
+  height: 444px;
+  line-height: 444px; }
+
+/* single */
+.entry-title {
+  color: #678f11; }
+
+/* archives */
+.archive time, .search time {
+  display: inline-block; }
+.archive #main h2, .search #main h2 {
+  margin-bottom: 6px; }
+  .archive #main h2 a, .search #main h2 a {
+    color: #678f11;
+    font-weight: normal; }
+    .archive #main h2 a:hover, .search #main h2 a:hover {
+      border-radius: 0;
+      border-bottom: 1px dotted #666; }
+.archive .hentry header, .search .hentry header {
+  margin-bottom: 0.5em; }
+.archive .hentry .entry-content p, .search .hentry .entry-content p {
+  margin-bottom: 0.5em; }
+
+/* comment */
+img.avatar {
+  background: url(img/dot.gif) repeat; }
+
+#comments li.comment .comment {
+  padding: 6px;
+  background: url(img/dot-bright.gif) repeat; }
+  #comments li.comment .comment p {
+    margin: 0; }
+
+#commentform input, #commentform textarea {
+  border: none;
+  padding: 5px;
+  background: url(img/dot-bright.gif) repeat; }
+#commentform label {
+  display: inline; }
+
+#comment {
+  width: 62%;
+  height: 8em; }
+
+#submit {
+  border-radius: 0;
+  border: 1px solid #bbb !important;
+  box-shadow: none;
+  color: #3b3b3b; }
+  #submit:hover {
+    color: #000;
+    background: url(img/dot.gif) repeat;
+    text-shadow: 0 1px 0 #fff; }
+
+/* 404 */
+.error404 .oh {
+  float: left;
+  width: 44.44%;
+  text-align: center; }
+  .error404 .oh img {
+    margin-bottom: 10px; }

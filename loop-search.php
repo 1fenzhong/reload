@@ -13,14 +13,13 @@
 		<?php roots_post_inside_before(); ?>
 			<header>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<time pubdate datetime="<?php the_time('c'); ?>"><?php printf(__('Posted on %s at %s.', 'roots'), get_the_time('l, F jS, Y'), get_the_time()); ?></time>
-        <p class="byline author vcard"><?php _e('Written by', 'roots'); ?> <?php the_author_posts_link(); ?></p>
+				<small>由 <a class="author" href="//jungle.1fenzhong.org/profile/<?php the_author(); ?>"><?php the_author(); ?></a> 发布于 <time pubdate datetime="<?php the_time('c'); ?>"><?php echo get_the_time('Y年n月j日') ?></time></small>
 			</header>
 			<div class="entry-content">
 				<?php the_excerpt(); ?>
 			</div>
-			<footer>
-				<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
+			<footer class="meta">
+				<?php $tag = get_the_tags(); if (!$tag) { ?><p><?php echo get_the_term_list($post->ID, 'dream_tag'); ?></p><?php } else { ?><p><?php the_tags('', ''); ?></p><?php } ?>
 			</footer>
 		<?php roots_post_inside_after(); ?>			
 		</article>
